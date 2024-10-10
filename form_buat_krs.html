@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Tambah KRS</title>
+    <title>Form KRS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="create_krs.php" method="post">
-        <label for="name">Nama Mahasiswa: </label><br>
-        <input type="text" name="name"><br>
-        <label for="nim">Nomor Induk Mahasiswa: </label><br>
-        <input type="text" name="nim"><br>
-        <label for="kelas">Kelas: </label><br>
-        <input type="radio" name="kelas" value="5A">Kelas 5A<br>
-        <input type="radio" name="kelas" value="5B">Kelas 5B<br>
-        <input type="radio" name="kelas" value="5C">Kelas 5C<br>
-        <input type="radio" name="kelas" value="5D">Kelas 5D<br>
-        <input type="radio" name="kelas" value="5E">Kelas 5E<br>
-        <label for="makul">Mata Kuliah Pilihan: </label><br>
-        <input type="checkbox" name="makul[]" value="WebApp">Web Application Development<br>
-        <input type="checkbox" name="makul[]" value="MobileApp">Mobile Application Development<br>
-        <input type="checkbox" name="makul[]" value="UI/UX">UI/UX Design<br>
-        <input type="checkbox" name="makul[]" value="SoftEng">Software Engineering<br>
-        <input type="checkbox" name="makul[]" value="DataEng">Data Engineering<br><br>
-        <input type="submit" value="Simpan KRS">
+    <h1>Form Pengisian KRS</h1>
+    <form id="krsForm" action="submit.php" method="post">
+        <label for="nama_mahasiswa">Nama Mahasiswa:</label>
+        <input type="text" id="nama_mahasiswa" name="nama_mahasiswa" required>
+        
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" name="nim" pattern="\d{10}" required title="NIM harus terdiri dari 10 digit angka.">
+        
+        <label for="kelas">Kelas:</label>
+        <select id="kelas" name="kelas" required>
+            <option value="">Pilih Kelas</option>
+            <option value="5A">5A</option>
+            <option value="5B">5B</option>
+            <option value="5C">5C</option>
+            <option value="5D">5D</option>
+            <option value="5E">5E</option>
+        </select>
+        
+        <label for="mata_kuliah">Mata Kuliah Pilihan:</label>
+        <select id="mata_kuliah" name="mata_kuliah[]" multiple required>
+            <option value="Web Application Development">Web Application Development</option>
+            <option value="Mobile Application Development">Mobile Application Development</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Data Engineering">Data Engineering</option>
+        </select>
+
+        <!-- Tambahkan margin untuk memberi jarak antara daftar mata kuliah dan tombol -->
+        <button type="submit" style="margin-top: 20px;">Simpan Data</button>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
