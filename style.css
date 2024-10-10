@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0d2e7; /* Warna latar belakang */
+}
+
+h1 {
+    color: #333; /* Warna teks judul */
+    text-align: center;
+}
+
+form {
+    max-width: 400px; /* Lebar maksimal form */
+    margin: auto; /* Pusatkan form */
+    background: #fff; /* Warna latar belakang form */
+    padding: 20px; /* Ruang di dalam form */
+    border-radius: 5px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+label {
+    display: block; /* Buat label tampil sebagai blok */
+    margin: 10px 0 5px; /* Margin atas, bawah, dan kiri/kanan */
+}
+
+input[type="text"], select {
+    width: 100%; /* Lebar penuh */
+    padding: 10px; /* Ruang di dalam input */
+    border: 1px solid #ccc; /* Garis batas */
+    border-radius: 4px; /* Sudut membulat */
+    box-sizing: border-box; /* Menghitung padding dalam lebar */
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #66afe9; /* Warna batas saat fokus */
+    outline: none; /* Hilangkan outline default */
+}
+
+button {
+    background-color: #0fb1de; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 15px; /* Ruang di dalam tombol */
+    border: none; /* Hilangkan garis batas */
+    border-radius: 4px; /* Sudut membulat */
+    cursor: pointer; /* Kursor berubah saat hover */
+    width: 100%; /* Lebar penuh tombol */
+}
+
+button:hover {
+    background-color: #0fb1de; /* Warna latar belakang tombol saat hover */
+}
